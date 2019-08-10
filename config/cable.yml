@@ -4,10 +4,10 @@ default: &default
   channel_prefix: cable
 
 development:
-  << *default
+  <<: *default
 
 test:
-  << *default
+  <<: *default
 
 production:
-  << *default
+  <<: *default

@@ -1,5 +1,6 @@
 FROM ubuntu:18.04
 
+ENV DEBIAN_FRONTEND=noninteractive 
 RUN apt-get update && apt-get install -y --no-install-recommends \
   build-essential \
   curl \
@@ -8,7 +9,8 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
   nodejs \
   ruby \
   ruby-dev \
-  zlib1g-dev
+  zlib1g-dev \
+  tzdata
 
 RUN curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add - && \
   echo "deb https://dl.yarnpkg.com/debian/ stable main" tee /etc/apt/sources.list.d/yarn.list && \
