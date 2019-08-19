@@ -8,6 +8,4 @@ class Auth::EmailsController < ApplicationController
     UserMailer.auth_email(params[:email]).deliver_later
   end
 
-  def callback
-  end
 end
